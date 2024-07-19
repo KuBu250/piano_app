@@ -65,37 +65,37 @@ Future<void> playSoundMI2() async {
 }
 
 Future<void> playSoundCSharp() async {
-  player11.setAsset('assets/C#2.wav');
+  player11.setAsset('assets/C_sharp.wav');
   await player11.play();
 }
 
 Future<void> playSoundDSharp() async {
-  player12.setAsset('assets/C#2.wav');
+  player12.setAsset('assets/D_sharp.wav');
   await player12.play();
 }
 
 Future<void> playSoundFSharp() async {
-  player13.setAsset('assets/F#.wav');
+  player13.setAsset('assets/F_sharp.wav');
   await player13.play();
 }
 
 Future<void> playSoundGSharp() async {
-  player14.setAsset('assets/G#.wav');
+  player14.setAsset('assets/G_sharp.wav');
   await player14.play();
 }
 
 Future<void> playSoundASharp() async {
-  player15.setAsset('assets/A#.wav');
+  player15.setAsset('assets/A_sharp.wav');
   await player15.play();
 }
 
 Future<void> playSoundC4Sharp() async {
-  player16.setAsset('assets/C4#.wav');
+  player16.setAsset('assets/C_4_sharp.wav');
   await player16.play();
 }
 
 Future<void> playSoundD4Sharp() async {
-  player17.setAsset('assets/D4#.wav');
+  player17.setAsset('assets/D_4_sharp.wav');
   await player17.play();
 }
 
@@ -127,7 +127,7 @@ class FilledButtonApp extends StatelessWidget {
                     child: FilledButton(
                       style: const ButtonStyle(
                           enableFeedback: false,
-                          alignment: Alignment.center,
+                          alignment: Alignment.bottomCenter,
                           minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                           backgroundColor: WidgetStatePropertyAll(Colors.grey),
                           foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -135,7 +135,7 @@ class FilledButtonApp extends StatelessWidget {
                       onPressed: () {
                         playSoundDO();
                       },
-                      child: const Text('Do'),
+                      child: const Text('C\n'),
                     ),
                   ),
                   // Positioned(top: 10, right: 360, child: FilledButton(
@@ -157,7 +157,7 @@ class FilledButtonApp extends StatelessWidget {
                   Positioned(top: 60, right: 800, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         // minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
@@ -174,13 +174,13 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundRE();
                     },
-                    child: const Text('Re'),
+                    child: const Text('D\n'),
                   ),),
                 //
                   Positioned(top: 60, right: 860, child: FilledButton(
                     style: const ButtonStyle(
                       enableFeedback: false,
-                      alignment: Alignment.center,
+                      alignment: Alignment.topCenter,
                       minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                       backgroundColor: WidgetStatePropertyAll(Colors.black),
                       foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -189,27 +189,28 @@ class FilledButtonApp extends StatelessWidget {
                     ),
 
                     onPressed: () {
-                      playSoundCSharp();
+                      // playSoundCSharp();
+                    playSoundCSharp();
                     },
-                    child: const Text('C#'),
+                    child: const Text('\nC#'),
                   ),),
                   Positioned(top: 60, right: 700, child: FilledButton(
                       style: const ButtonStyle(
                           enableFeedback: false,
-                          alignment: Alignment.center,
+                          alignment: Alignment.bottomCenter,
                           minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                           backgroundColor: WidgetStatePropertyAll(Colors.grey),
                           foregroundColor: WidgetStatePropertyAll(Colors.white),
                           side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                       ),
                       onPressed: () {
-                        playSoundCSharp();
+                        playSoundMI();
                       },
-                      child: const Text('Mi')),),
+                      child: const Text('E\n')),),
                   Positioned(top: 60, right: 760, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -218,14 +219,15 @@ class FilledButtonApp extends StatelessWidget {
                     ),
 
                     onPressed: () {
+                      // playSoundDSharp();
                       playSoundDSharp();
                     },
-                    child: const Text('D#'),
+                    child: const Text('\nD#'),
                   ),),
                   Positioned(top: 60, right: 600 ,child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
@@ -240,12 +242,12 @@ class FilledButtonApp extends StatelessWidget {
                         )),
                     onPressed: () {
                       playSoundFA();
-                    }, child: const Text('Fa'),
+                    }, child: const Text('F\n'),
                   ),),
                   Positioned(top: 60, right: 500, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor: WidgetStatePropertyAll(Colors.grey),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -254,12 +256,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundSOL();
                     },
-                    child: const Text('Sol'),
+                    child: const Text('G\n'),
                   ),),
                   Positioned(top: 60, right: 560, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -270,12 +272,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundFSharp();
                     },
-                    child: const Text('F#'),
+                    child: const Text('\nF#'),
                   ),),
                   Positioned(top: 60, right: 400, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
@@ -291,12 +293,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundLA();
                     },
-                    child: const Text('La'),
+                    child: const Text('A\n'),
                   ),),
                   Positioned(top: 60, right: 460, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -307,12 +309,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundGSharp();
                     },
-                    child: const Text('G#'),
+                    child: const Text('\nG#'),
                   ),),
                   Positioned(top: 60, right: 300, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor: WidgetStatePropertyAll(Colors.grey),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -321,12 +323,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundSI();
                     },
-                    child: const Text('Si'),
+                    child: const Text('H\n'),
                   ),),
                   Positioned(top: 60, right: 360, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -337,12 +339,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundASharp();
                     },
-                    child: const Text('A#'),
+                    child: const Text('\nA#'),
                   ),),
                   Positioned(top: 60, right: 200, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
@@ -358,12 +360,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundDO2();
                     },
-                    child: const Text('Do'),
+                    child: const Text('C\n'),
                   ),),
                   Positioned(top: 60, right: 100, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
@@ -379,12 +381,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundRE2();
                     },
-                    child: const Text('Re#2'),
+                    child: const Text('D\n'),
                   ),),
                   Positioned(top: 60, right: 160, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -395,12 +397,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundC4Sharp();
                     },
-                    child: const Text('C#2'),
+                    child: const Text('\nC#2'),
                   ),),
                   Positioned(top: 60, right: 0, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.bottomCenter,
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
@@ -416,12 +418,12 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundMI2();
                     },
-                    child: const Text('Mi#2'),
+                    child: const Text('E\n'),
                   ),),
                   Positioned(top: 60, right: 60, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
-                        alignment: Alignment.center,
+                        alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
@@ -432,7 +434,7 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundD4Sharp();
                     },
-                    child: const Text('D#2'),
+                    child: const Text('\nD#2'),
                   ),),
 
 
