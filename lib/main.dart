@@ -54,6 +54,51 @@ Future<void> playSoundDO2() async {
   await player8.play();
 }
 
+Future<void> playSoundRE2() async {
+  player9.setAsset('assets/RE2.wav');
+  await player9.play();
+}
+
+Future<void> playSoundMI2() async {
+  player10.setAsset('assets/MI2.wav');
+  await player10.play();
+}
+
+Future<void> playSoundCSharp() async {
+  player11.setAsset('assets/C#2.wav');
+  await player11.play();
+}
+
+Future<void> playSoundDSharp() async {
+  player12.setAsset('assets/C#2.wav');
+  await player12.play();
+}
+
+Future<void> playSoundFSharp() async {
+  player13.setAsset('assets/F#.wav');
+  await player13.play();
+}
+
+Future<void> playSoundGSharp() async {
+  player14.setAsset('assets/G#.wav');
+  await player14.play();
+}
+
+Future<void> playSoundASharp() async {
+  player15.setAsset('assets/A#.wav');
+  await player15.play();
+}
+
+Future<void> playSoundC4Sharp() async {
+  player16.setAsset('assets/C4#.wav');
+  await player16.play();
+}
+
+Future<void> playSoundD4Sharp() async {
+  player17.setAsset('assets/D4#.wav');
+  await player17.play();
+}
+
 class FilledButtonApp extends StatelessWidget {
   const FilledButtonApp({super.key});
 
@@ -76,31 +121,45 @@ class FilledButtonApp extends StatelessWidget {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Column(children: <Widget>[
+                SizedBox(width: 1140, height: 420, child: Stack(children: <Widget>[
                   const SizedBox(height: 25),
-                  FilledButton(
-                    style: const ButtonStyle(
-                        enableFeedback: false,
-                        alignment: Alignment.center,
-                        minimumSize: WidgetStatePropertyAll(Size(80, 225)),
-                        backgroundColor: WidgetStatePropertyAll(Colors.black),
-                        foregroundColor: WidgetStatePropertyAll(Colors.white)),
-                    onPressed: () {
-                      playSoundDO();
-                    },
-                    child: const Text('Do'),
+                  Positioned(top: 60, right: 900,
+                    child: FilledButton(
+                      style: const ButtonStyle(
+                          enableFeedback: false,
+                          alignment: Alignment.center,
+                          minimumSize: WidgetStatePropertyAll(Size(105, 300)),
+                          backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                          foregroundColor: WidgetStatePropertyAll(Colors.white),
+                          side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black)) ),
+                      onPressed: () {
+                        playSoundDO();
+                      },
+                      child: const Text('Do'),
+                    ),
                   ),
-                  const SizedBox(height: 30),
-
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                  // Positioned(top: 10, right: 360, child: FilledButton(
+                  //   style: const ButtonStyle(
+                  //     enableFeedback: false,
+                  //     alignment: Alignment.center,
+                  //     minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                  //     backgroundColor: WidgetStatePropertyAll(Colors.black),
+                  //     foregroundColor: WidgetStatePropertyAll(Colors.white),
+                  //     // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                  //   ),
+                  //
+                  //   onPressed: () {
+                  //     playSoundDO();
+                  //   },
+                  //   child: const Text('C#'),
+                  // ),),
+                  //
+                  Positioned(top: 60, right: 800, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                        // minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
                         foregroundColor:
@@ -116,33 +175,58 @@ class FilledButtonApp extends StatelessWidget {
                       playSoundRE();
                     },
                     child: const Text('Re'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                  ),),
+                //
+                  Positioned(top: 60, right: 860, child: FilledButton(
+                    style: const ButtonStyle(
+                      enableFeedback: false,
+                      alignment: Alignment.center,
+                      minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                      backgroundColor: WidgetStatePropertyAll(Colors.black),
+                      foregroundColor: WidgetStatePropertyAll(Colors.white),
+                      side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundCSharp();
+                    },
+                    child: const Text('C#'),
+                  ),),
+                  Positioned(top: 60, right: 700, child: FilledButton(
                       style: const ButtonStyle(
                           enableFeedback: false,
                           alignment: Alignment.center,
-                          minimumSize: WidgetStatePropertyAll(Size(80, 225)),
-                          backgroundColor: WidgetStatePropertyAll(Colors.black),
-                          foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                          minimumSize: WidgetStatePropertyAll(Size(105, 300)),
+                          backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                          foregroundColor: WidgetStatePropertyAll(Colors.white),
+                          side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                      ),
                       onPressed: () {
-                        playSoundMI();
+                        playSoundCSharp();
                       },
-                      child: const Text('Mi')),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                      child: const Text('Mi')),),
+                  Positioned(top: 60, right: 760, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.black),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundDSharp();
+                    },
+                    child: const Text('D#'),
+                  ),),
+                  Positioned(top: 60, right: 600 ,child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
                         foregroundColor:
@@ -157,34 +241,42 @@ class FilledButtonApp extends StatelessWidget {
                     onPressed: () {
                       playSoundFA();
                     }, child: const Text('Fa'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                  ),),
+                  Positioned(top: 60, right: 500, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: WidgetStatePropertyAll(Size(80, 225)),
-                        backgroundColor: WidgetStatePropertyAll(Colors.black),
-                        foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                        minimumSize: WidgetStatePropertyAll(Size(105, 300)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
                     onPressed: () {
                       playSoundSOL();
                     },
                     child: const Text('Sol'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                  ),),
+                  Positioned(top: 60, right: 560, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.black),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundFSharp();
+                    },
+                    child: const Text('F#'),
+                  ),),
+                  Positioned(top: 60, right: 400, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
                         foregroundColor:
@@ -200,34 +292,58 @@ class FilledButtonApp extends StatelessWidget {
                       playSoundLA();
                     },
                     child: const Text('La'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton.tonal(
+                  ),),
+                  Positioned(top: 60, right: 460, child: FilledButton(
                     style: const ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
-                        foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundGSharp();
+                    },
+                    child: const Text('G#'),
+                  ),),
+                  Positioned(top: 60, right: 300, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(105, 300)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
                     onPressed: () {
                       playSoundSI();
                     },
                     child: const Text('Si'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
-                const SizedBox(width: 5),
-                Column(children: <Widget>[
-                  const SizedBox(height: 25),
-                  FilledButton(
+                  ),),
+                  Positioned(top: 60, right: 360, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.black),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundASharp();
+                    },
+                    child: const Text('A#'),
+                  ),),
+                  Positioned(top: 60, right: 200, child: FilledButton(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.center,
-                        minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
                         const WidgetStatePropertyAll(Colors.grey),
                         foregroundColor:
@@ -243,9 +359,288 @@ class FilledButtonApp extends StatelessWidget {
                       playSoundDO2();
                     },
                     child: const Text('Do'),
-                  ),
-                  const SizedBox(height: 30),
-                ]),
+                  ),),
+                  Positioned(top: 60, right: 100, child: FilledButton(
+                    style: ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
+                        backgroundColor:
+                        const WidgetStatePropertyAll(Colors.grey),
+                        foregroundColor:
+                        const WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStateProperty.all<BorderSide>(
+                          const BorderSide(
+                            width: 2.0,
+                            color: Colors
+                                .black, // Set your desired border color here
+                          ),
+                        )),
+                    onPressed: () {
+                      playSoundRE2();
+                    },
+                    child: const Text('Re#2'),
+                  ),),
+                  Positioned(top: 60, right: 160, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.black),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundC4Sharp();
+                    },
+                    child: const Text('C#2'),
+                  ),),
+                  Positioned(top: 60, right: 0, child: FilledButton(
+                    style: ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
+                        backgroundColor:
+                        const WidgetStatePropertyAll(Colors.grey),
+                        foregroundColor:
+                        const WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStateProperty.all<BorderSide>(
+                          const BorderSide(
+                            width: 2.0,
+                            color: Colors
+                                .black, // Set your desired border color here
+                          ),
+                        )),
+                    onPressed: () {
+                      playSoundMI2();
+                    },
+                    child: const Text('Mi#2'),
+                  ),),
+                  Positioned(top: 60, right: 60, child: FilledButton(
+                    style: const ButtonStyle(
+                        enableFeedback: false,
+                        alignment: Alignment.center,
+                        minimumSize: WidgetStatePropertyAll(Size(75, 225)),
+                        backgroundColor: WidgetStatePropertyAll(Colors.black),
+                        foregroundColor: WidgetStatePropertyAll(Colors.white),
+                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                    ),
+
+                    onPressed: () {
+                      playSoundD4Sharp();
+                    },
+                    child: const Text('D#2'),
+                  ),),
+
+
+
+                ],),
+                //     child: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: const ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor: WidgetStatePropertyAll(Colors.grey),
+                //         foregroundColor: WidgetStatePropertyAll(Colors.white),
+                //     side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black)) ),
+                //     onPressed: () {
+                //       playSoundDO();
+                //     },
+                //     child: const Text('Do'),
+                //   ),
+                //   const SizedBox(height: 1),
+                //
+                // ]
+                ),
+
+
+
+                //
+                // const SizedBox(width: 1),
+                //
+                // Column(children: <Widget>[
+                //   // const SizedBox(height: 25),
+                //
+                //   FilledButton(
+                //     style: const ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor: WidgetStatePropertyAll(Colors.black),
+                //         foregroundColor: WidgetStatePropertyAll(Colors.white),
+                //     // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                //     ),
+                //
+                //     onPressed: () {
+                //       playSoundDO();
+                //     },
+                //     child: const Text('C#'),
+                //   ),
+                //   const SizedBox(height: 60),
+                //
+                // ]),
+                // const SizedBox(width: 1),
+                // //
+                // // Column(children: <Widget>[
+                const SizedBox(width: 35),
+
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor:
+                //         const WidgetStatePropertyAll(Colors.grey),
+                //         foregroundColor:
+                //         const WidgetStatePropertyAll(Colors.white),
+                //         side: WidgetStateProperty.all<BorderSide>(
+                //           const BorderSide(
+                //             width: 2.0,
+                //             color: Colors
+                //                 .black, // Set your desired border color here
+                //           ),
+                //         )),
+                //     onPressed: () {
+                //       playSoundRE();
+                //     },
+                //     child: const Text('Re'),
+                //   ),
+                //   const SizedBox(height: 1),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //       style: const ButtonStyle(
+                //           enableFeedback: false,
+                //           alignment: Alignment.center,
+                //           minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                //           backgroundColor: WidgetStatePropertyAll(Colors.black),
+                //           foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                //       onPressed: () {
+                //         playSoundMI();
+                //       },
+                //       child: const Text('Mi')),
+                //   const SizedBox(height: 30),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor:
+                //         const WidgetStatePropertyAll(Colors.grey),
+                //         foregroundColor:
+                //         const WidgetStatePropertyAll(Colors.white),
+                //         side: WidgetStateProperty.all<BorderSide>(
+                //           const BorderSide(
+                //             width: 2.0,
+                //             color: Colors
+                //                 .black, // Set your desired border color here
+                //           ),
+                //         )),
+                //     onPressed: () {
+                //       playSoundFA();
+                //     }, child: const Text('Fa'),
+                //   ),
+                //   const SizedBox(height: 30),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: const ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor: WidgetStatePropertyAll(Colors.black),
+                //         foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                //     onPressed: () {
+                //       playSoundSOL();
+                //     },
+                //     child: const Text('Sol'),
+                //   ),
+                //   const SizedBox(height: 30),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor:
+                //         const WidgetStatePropertyAll(Colors.grey),
+                //         foregroundColor:
+                //         const WidgetStatePropertyAll(Colors.white),
+                //         side: WidgetStateProperty.all<BorderSide>(
+                //           const BorderSide(
+                //             width: 2.0,
+                //             color: Colors
+                //                 .black, // Set your desired border color here
+                //           ),
+                //         )),
+                //     onPressed: () {
+                //       playSoundLA();
+                //     },
+                //     child: const Text('La'),
+                //   ),
+                //   const SizedBox(height: 30),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: const ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor: WidgetStatePropertyAll(Colors.black),
+                //         foregroundColor: WidgetStatePropertyAll(Colors.white)),
+                //     onPressed: () {
+                //       playSoundSI();
+                //     },
+                //     child: const Text('Si'),
+                //   ),
+                //   const SizedBox(height: 30),
+                // ]),
+                const SizedBox(width: 5),
+                // Column(children: <Widget>[
+                //   const SizedBox(height: 25),
+                //   FilledButton(
+                //     style: ButtonStyle(
+                //         enableFeedback: false,
+                //         alignment: Alignment.center,
+                //         minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
+                //         backgroundColor:
+                //         const WidgetStatePropertyAll(Colors.grey),
+                //         foregroundColor:
+                //         const WidgetStatePropertyAll(Colors.white),
+                //         side: WidgetStateProperty.all<BorderSide>(
+                //           const BorderSide(
+                //             width: 2.0,
+                //             color: Colors
+                //                 .black, // Set your desired border color here
+                //           ),
+                //         )),
+                //     onPressed: () {
+                //       playSoundDO2();
+                //     },
+                //     child: const Text('Do'),
+                //   ),
+                //   const SizedBox(height: 30),
+                // ]),
               ],
             ),
           ),
