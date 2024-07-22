@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:piano_app/widgets/just_audio_widget.dart';
 
 /// Flutter code sample for [FilledButton].
@@ -124,14 +128,18 @@ class FilledButtonApp extends StatelessWidget {
                 SizedBox(width: 1140, height: 420, child: Stack(children: <Widget>[
                   const SizedBox(height: 25),
                   Positioned(top: 60, right: 900,
-                    child: FilledButton(
-                      style: const ButtonStyle(
+                    child: FilledButton.tonal(
+                      style: ButtonStyle(
                           enableFeedback: false,
                           alignment: Alignment.bottomCenter,
                           minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                           backgroundColor: WidgetStatePropertyAll(Colors.grey),
                           foregroundColor: WidgetStatePropertyAll(Colors.white),
-                          side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black)) ),
+                        side: WidgetStateProperty.all(BorderSide(width: 4, color: Colors.black, strokeAlign: BorderSide.strokeAlignOutside)),
+                        shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                          // shape: Border(top: BorderSide(color: Colors.green, width: 9), bottom: BorderSide(color: Colors.yellow, width: 4,), left: BorderSide(color: Colors.red, width: 4), right: BorderSide(color: Colors.black, width: 4)),
+                      ),
+
                       onPressed: () {
                         playSoundDO();
                       },
@@ -154,37 +162,45 @@ class FilledButtonApp extends StatelessWidget {
                   //   child: const Text('C#'),
                   // ),),
                   //
-                  Positioned(top: 60, right: 800, child: FilledButton(
+                  Positioned(top: 60, right: 800, child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
                         // minimumSize: const WidgetStatePropertyAll(Size(80, 225)),
                         minimumSize: const WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor:
-                        const WidgetStatePropertyAll(Colors.grey),
-                        foregroundColor:
+                        // const WidgetStatePropertyAll(Colors.grey),
+                      const WidgetStatePropertyAll(Colors.grey),
+                      foregroundColor:
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                              width: 4.0,
+                              // width: 2.0,
                             color: Colors
-                                .black, // Set your desired border color here
+                                .black,
+                              strokeAlign: BorderSide.strokeAlignOutside// Set your desired border color here
                           ),
-                        )),
+                        ),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundRE();
                     },
                     child: const Text('D\n'),
                   ),),
                 //
-                  Positioned(top: 60, right: 860, child: FilledButton(
-                    style: const ButtonStyle(
-                      enableFeedback: false,
+                  Positioned(top: 56, right: 860, child: FilledButton.tonal(
+                    style: ButtonStyle(
+                        enableFeedback: false,
                       alignment: Alignment.topCenter,
                       minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                       backgroundColor: WidgetStatePropertyAll(Colors.black),
                       foregroundColor: WidgetStatePropertyAll(Colors.white),
-                      side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                      // side: WidgetStateProperty.all(Border(top: BorderSide(Colors.black))),
+                      // BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -194,27 +210,29 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nC#'),
                   ),),
-                  Positioned(top: 60, right: 700, child: FilledButton(
-                      style: const ButtonStyle(
+                  Positioned(top: 60, right: 700, child: FilledButton.tonal(
+                      style: ButtonStyle(
                           enableFeedback: false,
                           alignment: Alignment.bottomCenter,
                           minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                           backgroundColor: WidgetStatePropertyAll(Colors.grey),
                           foregroundColor: WidgetStatePropertyAll(Colors.white),
-                          side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                          side: WidgetStateProperty.all(BorderSide(width: 4, color: Colors.black, strokeAlign: BorderSide.strokeAlignOutside)),
+                        shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       ),
                       onPressed: () {
                         playSoundMI();
                       },
                       child: const Text('E\n')),),
-                  Positioned(top: 60, right: 760, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 760, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -224,7 +242,7 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nD#'),
                   ),),
-                  Positioned(top: 60, right: 600 ,child: FilledButton(
+                  Positioned(top: 60, right: 600 ,child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
@@ -235,37 +253,42 @@ class FilledButtonApp extends StatelessWidget {
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                            width: 4.0,
                             color: Colors
-                                .black, // Set your desired border color here
+                                .black,
+                            strokeAlign: BorderSide.strokeAlignOutside// Set your desired border color here
                           ),
-                        )),
+                        ),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundFA();
                     }, child: const Text('F\n'),
                   ),),
-                  Positioned(top: 60, right: 500, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 60, right: 500, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
                         minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor: WidgetStatePropertyAll(Colors.grey),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                        side: WidgetStatePropertyAll(BorderSide(width: 4, color: Colors.black, strokeAlign: BorderSide.strokeAlignOutside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                     ),
                     onPressed: () {
                       playSoundSOL();
                     },
                     child: const Text('G\n'),
                   ),),
-                  Positioned(top: 60, right: 560, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 560, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -274,7 +297,7 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nF#'),
                   ),),
-                  Positioned(top: 60, right: 400, child: FilledButton(
+                  Positioned(top: 60, right: 400, child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
@@ -285,24 +308,28 @@ class FilledButtonApp extends StatelessWidget {
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                            width: 4.0,
                             color: Colors
-                                .black, // Set your desired border color here
+                                .black,
+                            strokeAlign: BorderSide.strokeAlignOutside,// Set your desired border color here
                           ),
-                        )),
+                        ),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundLA();
                     },
                     child: const Text('A\n'),
                   ),),
-                  Positioned(top: 60, right: 460, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 460, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -311,28 +338,31 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nG#'),
                   ),),
-                  Positioned(top: 60, right: 300, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 60, right: 300, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
                         minimumSize: WidgetStatePropertyAll(Size(105, 300)),
                         backgroundColor: WidgetStatePropertyAll(Colors.grey),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
+                        side: WidgetStatePropertyAll(BorderSide(width: 4, color: Colors.black, strokeAlign: BorderSide.strokeAlignOutside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                     ),
                     onPressed: () {
                       playSoundSI();
                     },
                     child: const Text('H\n'),
                   ),),
-                  Positioned(top: 60, right: 360, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 360, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -341,7 +371,7 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nA#'),
                   ),),
-                  Positioned(top: 60, right: 200, child: FilledButton(
+                  Positioned(top: 60, right: 200, child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
@@ -352,17 +382,19 @@ class FilledButtonApp extends StatelessWidget {
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                            width: 4.0,
                             color: Colors
-                                .black, // Set your desired border color here
-                          ),
-                        )),
+                                .black,
+                            strokeAlign: BorderSide.strokeAlignOutside,// Set your desired border color here
+                          ),),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundDO2();
                     },
                     child: const Text('C\n'),
                   ),),
-                  Positioned(top: 60, right: 100, child: FilledButton(
+                  Positioned(top: 60, right: 100, child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
@@ -373,24 +405,27 @@ class FilledButtonApp extends StatelessWidget {
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                            width: 4.0,
                             color: Colors
-                                .black, // Set your desired border color here
-                          ),
-                        )),
+                                .black,
+                            strokeAlign: BorderSide.strokeAlignOutside,// Set your desired border color here
+                          ),),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundRE2();
                     },
                     child: const Text('D\n'),
                   ),),
-                  Positioned(top: 60, right: 160, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 160, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white, strokeAlign: BorderSide.strokeAlignInside,)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
@@ -399,7 +434,7 @@ class FilledButtonApp extends StatelessWidget {
                     },
                     child: const Text('\nC#2'),
                   ),),
-                  Positioned(top: 60, right: 0, child: FilledButton(
+                  Positioned(top: 60, right: 0, child: FilledButton.tonal(
                     style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.bottomCenter,
@@ -410,24 +445,29 @@ class FilledButtonApp extends StatelessWidget {
                         const WidgetStatePropertyAll(Colors.white),
                         side: WidgetStateProperty.all<BorderSide>(
                           const BorderSide(
-                            width: 2.0,
+                            width: 4.0,
                             color: Colors
-                                .black, // Set your desired border color here
+                                .black,
+                            strokeAlign: BorderSide.strokeAlignOutside,// Set your desired border color here
                           ),
-                        )),
+
+                        ),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
+                    ),
                     onPressed: () {
                       playSoundMI2();
                     },
                     child: const Text('E\n'),
                   ),),
-                  Positioned(top: 60, right: 60, child: FilledButton(
-                    style: const ButtonStyle(
+                  Positioned(top: 56, right: 60, child: FilledButton.tonal(
+                    style: ButtonStyle(
                         enableFeedback: false,
                         alignment: Alignment.topCenter,
                         minimumSize: WidgetStatePropertyAll(Size(75, 225)),
                         backgroundColor: WidgetStatePropertyAll(Colors.black),
                         foregroundColor: WidgetStatePropertyAll(Colors.white),
-                        side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white))
+                        // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.white)),
+                      shape: WidgetStateProperty.all(const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10)))),
                       // side: WidgetStatePropertyAll(BorderSide(width: 2, color: Colors.black))
                     ),
 
