@@ -37,6 +37,7 @@ class _MainPianoPageState extends State<MainPianoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.deepPurple[200],
       appBar: MyAppBars(),
 
