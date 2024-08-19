@@ -1,5 +1,8 @@
+// import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:piano_app/widgets/positioned_buttons.dart';
 
 final ValueNotifier<String> appBarValueHolder = ValueNotifier("KuBu250's AppBar");
 
@@ -40,15 +43,20 @@ class _ShowHideCreditentialsWidgetState extends State<ShowHideCreditentialsWidge
       return Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
-        children: [SizedBox(width: 1260,),
+        children: [
+          // SizedBox(width: 1260,),
+          // Container(color: Colors.green, width: 1260, height: 50,),
+
           SizedBox(width: 360,
               height: 45,
-              child: CheckboxListTile(title: Padding(padding: EdgeInsets.only(bottom: 10), child: FittedBox(child: const Text("Hide/Show Creator's AppBar", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,), textAlign: TextAlign.right,))), value: _isChecked, onChanged: (bool? newValue) {
+              child: CheckboxListTile(visualDensity: VisualDensity.compact,title: Padding(padding: EdgeInsets.only(bottom: 10), child: Align(alignment: Alignment.centerRight, child: FittedBox(child: const Text("Hide/Show Creator's AppBar", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,), textAlign: TextAlign.right,)))), value: _isChecked, onChanged: (bool? newValue) {
                 setState(() {
                   _isChecked = newValue;
                   print(_isChecked);
                   appTitlesCallback('', "KuBu250's AppBar");
                   appBarValueHolder.value = appBarTitleObject;
+                  // isSoundchangedValueHolder.value  = false;
+                  // changix();
                 },
                 );
               },

@@ -4,8 +4,10 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
-<!--</manifest>-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <!--</manifest>-->
 <application>
 <meta-data
 android:name="io.flutter.embedding.android.EnableImpeller"

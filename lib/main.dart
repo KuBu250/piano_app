@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:piano_app/widgets/my_app_bars.dart';
+import 'package:piano_app/widgets/octave_shifts.dart';
 import 'package:piano_app/widgets/positioned_buttons.dart';
 import 'package:piano_app/widgets/show_hide_creditentials_widget.dart';
 
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
   SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft])
       .then((onValue) => runApp(const PianoApp()));
 }
@@ -62,7 +64,17 @@ class _MainPianoPageState extends State<MainPianoPage> {
               const SizedBox(width: 110),
             ],
           ),
-            ShowHideCreditentialsWidget(),
+            Row(
+              children: [
+                OctaveShiftWidget(),
+                Container(height: 30, width: 500,
+                  // color: Colors.green,
+                ),
+                ShowHideCreditentialsWidget(),
+              ],
+            )
+            // ShowHideCreditentialsWidget(),
+            // OctaveShitWidget(),
           ],
         ),
       ),
